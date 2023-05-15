@@ -1,0 +1,53 @@
+.accPanel {
+    display: flex;
+    //flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    flex-wrap: wrap;
+    
+    height: 95vh;//calc(~"100vh - 85px");
+    width: 80%;
+
+    background-color: #06194d;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.accPanel > span {
+    font-size: 40px;
+    padding-top: 10px;
+}
+
+.accInfos {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    height: 1000px;
+    width: 100%;
+}
+
+.userPictureContainer {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+}
+
+.userPictureContainer img {
+    max-height: 100px;
+    max-width: 100px;
+    border-radius: 50px;
+    z-index: 0;
+}
+
+.userPictureContainer img:hover {
+    background-color: rgba(143, 121, 121, 0.616);
+    z-index: 1;
+    border-radius: 3px dashed rgb(66, 66, 66);
+    border-radius: 50%;
+    opacity: 0.4;
+    content: 'change img';
+}
+
+.changeProfileImg {
+    color: #aaa;
+}

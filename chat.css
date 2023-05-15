@@ -1,0 +1,116 @@
+#chatStory {
+    display: flex; //display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    height: calc(100vh - 85px - 62px);
+    width: 70vw;
+    font-size: 28px;
+    overflow-wrap: anywhere;
+    background-color: rgb(65, 78, 90);
+    overflow-x: none;
+    overflow-y: auto;
+    //overflow-anchor: none;
+}
+
+.message {
+    display: flex;
+    padding: 5px;
+    margin: 5px 65px;
+    height: min-content;
+    min-width: 10px;
+    max-width: 400px;
+    background-color: rgb(98, 117, 180);
+    border-radius: 20px;
+}
+
+ /* writed not by user */
+.other {
+    display: flex;
+}
+
+/* FIXIT: larger message mekes shorter image
+zmień na osobny div, dodaj js jeżeli poprzedna wiadomość ma klasę you, pomiń dodanie diva*/
+.other::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    width: 50px !important;
+    height: 50px;
+    background-image: url('src/users avatars/default-avatar-male.png'); /* for see result, not pessonalised */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    border-radius: 50%;
+    z-index: 9999999;
+}
+
+/* reader */
+.you {
+    display: flex;
+    align-self: flex-end;
+    margin-right: 30px;
+}
+
+#submitMessagePanel {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 60px;
+    width: 70vw;
+    background-color: rgb(65, 78, 90);
+    border-top: 2px dashed white;
+}
+
+form {
+    display: flex;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    height: 60px;
+    width: calc(100vw - 30vw);
+    border-radius: 20px;
+}
+
+/* wyśrodkuj napis */
+input[type=button] { 
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 40px;
+    height: 40px;
+    color: #623ad1;
+    font-size: 25px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: rgb(184, 184, 184);
+    border: none;
+}
+
+input[type=text] { 
+    display: flex;
+    align-self: center;
+    margin: 10px;
+    padding: 6px 5px;
+    width: 600px;
+    height: 30px;
+    color: #ffffff;
+    font-size: 25px;
+    border: 0px solid #1c5e5f;
+    border-radius: 10px;
+    background-color: #184d4e;
+    border: 0;
+    outline: 0;
+}
+
+input[type=text]:hover {
+    border: 0;
+    outline: 0;
+}
