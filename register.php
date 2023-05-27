@@ -6,7 +6,7 @@
     
     require_once "DBconnect.php";
 
-    //dodaj zapytanie o płeć
+    //need ask about sex to add default avatars
     if(isset($_POST['submit'])) {
         $login = $_POST['login'];
         $email = $_POST['email'];
@@ -15,10 +15,6 @@
         $password2 = $_POST['password2'];
         $data_error = false;
         unset($_POST['submit']);
-        // unset($_POST['login']);
-        // unset($_POST['email']);
-        // unset($_POST['password1']);
-        // unset($_POST['password2']);
     
         if((ctype_alnum($login) != true) or strlen($login) < 4) {
             $data_error = true;

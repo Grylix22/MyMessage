@@ -1,5 +1,8 @@
 ﻿<?php
     session_start();
+    //temporart to not need login every time as start working at project. Before dev delete 2 lines under comment
+    $_SESSION['user_id'] = '';
+    $_SESSION['accountLoginSession'] = "admin";
     if(isset($_SESSION['accountLoginSession']) and $_SESSION['accountLoginSession'] != '') {
         header("Location: chats.php");
     }

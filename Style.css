@@ -38,8 +38,8 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-  margin-top: 85px;
-  height: calc(100vh - 85px);
+  margin-top: 80px;
+  height: calc(100vh - 80px);
 }
 
 
@@ -206,14 +206,14 @@ p {
   font-size: 20px;
   color:rgb(255, 255, 255);
   left: 0;
-  height: calc(100vh - 85px);
+  height: calc(100vh - 80px);
   width: 30vw;
 }
 
 #chatList {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 85px);
+  height: calc(100vh - 80px);
   width: 100%;
   font-weight: 600;
   background-color: #292a3a;

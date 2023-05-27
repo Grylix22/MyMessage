@@ -18,7 +18,7 @@
             require_once "DBconnect.php";
             try {
                 $DBconnect = new mysqli($host, $db_user, $db_password, $db_name);
-                $q = "SELECT login, password FROM accounts";
+                $q = "SELECT id, login, password FROM accounts";
 
                 $result = $DBconnect-> query($q);
                 $userRow = $result-> num_rows;
@@ -30,6 +30,7 @@
                         $_SESSION['error'] = "Błędny login lub hasło";
                     } else {
                         unset($_SESSION['error']);
+                        $_SESSION['user_id'] = $_POST['id'];
                         $_SESSION['accountLoginSession'] = $_POST['login'];
                         header("Location: chats.php");
                     }

@@ -13,14 +13,14 @@ const submitButton = document.getElementById("submit");
 const messageInput = document.getElementById("textInput");
 const autoReceiveInput = document.getElementById("autoReceiveMessages");
 
-var Userinfo = {
+let Userinfo = {
     userId: "01",
     name: "Łukasz",
     surname: "Grynbaum",
     GlobalTime: "GMT+2"
 }
 
-var messageData = {
+let messageData = {
     userId: '',
     sender: '',
     receiver: '',
@@ -64,7 +64,7 @@ let defaultMessages = [
     "Local Area Network in Australia : The LAN down under.",
     "He broke into song because he couldn’t find the key.",
     "A calendar’s days are numbered."
-  ];
+];
 
 // download data from mess writed by user accesable to add to database
 function getDataMessage() {
@@ -79,13 +79,14 @@ function getDataMessage() {
     // check file userID-friendID.json
 }
 
+
 function randomMessage() {
-        if(document.getElementById("autoReceiveMessage").checked == false) {
-            return;
-        } else {
+    if (document.getElementById("autoReceiveMessage").checked == false) {
+        return;
+    } else {
         let message = defaultMessages[(Math.random() * defaultMessages.length) | 0];
         newMessagePrint("other", message);
-        }
+    }
 }
 
 // test message from friend
@@ -99,13 +100,13 @@ function sendMessage() {
 function newMessagePrint(writer, message) {
     // other - another user
     // you - logged user
-    if(writer == "other") {
-        document.getElementById("chatStory"). innerHTML += "<div class=\"message other\">" + message + "</div>";
+    if (writer == "other") {
+        document.getElementById("chatStory").innerHTML += "<div class=\"message other\">" + message + "</div>";
     } else {
-        if(document.getElementById("textInput").value == '') {
+        if (document.getElementById("textInput").value == '') {
             return;
         }
-        document.getElementById("chatStory"). innerHTML += "<div class=\"message you\">" + message + "</div>";
+        document.getElementById("chatStory").innerHTML += "<div class=\"message you\">" + message + "</div>";
     }
     scrollToBottom();
     document.getElementById("textInput").value = '';
@@ -124,3 +125,4 @@ function printing(arg) {
     console.clear;
     console.log(arg);
 }
+
