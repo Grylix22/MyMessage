@@ -1,5 +1,6 @@
 # WMS - live chat
-Website created because to my curiosity about how this type of applications works.
+Website created because out of curiosity about how this type of applications works.
+
 Simple and clear. Prepared mainly to use on PC but also ~~works on mobile~~ (not yet)
 
 ## Languages and Technologies used in project
